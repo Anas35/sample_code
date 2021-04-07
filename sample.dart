@@ -5,8 +5,8 @@ import 'dart:io' as Io;
 
 void main() async {
 
-  final regId = RegExp(r'licenseId="(.*)"( )?');
-  final regName = RegExp(r'name="(.*)"');
+  final regId = RegExp(r'licenseId="([^"]*)');
+  final regName = RegExp(r'name="([^"]*)');
   final regLink = RegExp(r'<crossRef>(.*)</crossRef>');
 
   print('Enter the SPDX xml FileName : ');
@@ -25,7 +25,7 @@ void main() async {
     var licenseName = regName.firstMatch(content)?.group(1);
     var licenseLink = regLink.firstMatch(content)?.group(1);
 
-    print('''
+    print('''\n    
     Licnese Name: $licenseName
     License Id  : $licenseId
     License Link: $licenseLink
