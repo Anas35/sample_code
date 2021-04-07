@@ -9,7 +9,7 @@ void main() async {
   final regName = RegExp(r'name="(.*)"');
   final regLink = RegExp(r'<crossRef>(.*)</crossRef>');
 
-  print('Enter the SPDX File name : ');
+  print('Enter the SPDX xml FileName : ');
   var file = Io.stdin.readLineSync();
 
   String path = Io.Directory.current.path + '/internal/xml/';
