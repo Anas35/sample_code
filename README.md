@@ -1,2 +1,2 @@
 # sample_code
-A Simple demonstrating of a each feature in SPDX License detector at Dart's GSOC
+A Simple example demonstrating each feature in the SPDX License detector at Dart's GSoC
